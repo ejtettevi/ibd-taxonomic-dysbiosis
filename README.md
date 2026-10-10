@@ -81,7 +81,7 @@ graph LR
 │   └── taxon/                species & genus count tables (+ per-cohort subdirs)
 ├── figures/                  intermediate renders          (versioned)
 ├── figures_final/            publication figures 1–9       (versioned)
-├── generate_*figures*.py     figure pipelines (final = publication versions)
+├── generate_final_publication_figures.py   publication figures 1–9 (single entry point)
 ├── environment.yml           full conda environment (R + Python)
 ├── cohorts.tsv               cohort provenance manifest (source PMIDs)
 └── run_all.sh                single entry point for all stages
