@@ -7,8 +7,11 @@ dependencies:
   - python=3.11
   - r-base=4.3
   - r-tidyverse
+  - r-readr
   - r-metafor
   - bioconductor-phyloseq
+  - bioconductor-summarizedexperiment
+  - bioconductor-curatedmetagenomicdata
   - bioconductor-maaslin2
   - bioconductor-ancombc
   - sra-tools
@@ -18,3 +21,4 @@ dependencies:
   - pip
   - pip:
       - pysradb
+      - requests
