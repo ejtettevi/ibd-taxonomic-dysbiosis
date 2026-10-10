@@ -76,13 +76,20 @@ graph LR
 │   ├── metadata/             sample_name / status / age / sex per cohort
 │   └── taxon/                species & genus count tables (+ per-cohort subdirs)
 ├── figures_final/            embedded previews of publication figures 1–9
+├── submission/
+│   ├── 02_manuscript_gigabyte.md   GigaByte Technical Release manuscript (first-cited refs 1–18)
+│   ├── 01_cover_letter.md          cover letter
+│   ├── 05_README_GigaDB.md         GigaDB data-package README (file dictionary + reproduction)
+│   ├── 06_gigadb_metadata.md       GigaDB dataset metadata (authors, files, links)
+│   ├── 07_submission_checklist.md  journal-requirement checklist
+│   └── figures/                    final figures 1–9, numbered by first mention
 ├── environment.yml           pinned conda environment (R + Python)
 ├── cohorts.tsv               cohort provenance manifest (source PMIDs)
 ├── generate_final_publication_figures.py
 └── run_all.sh                single entry point for all stages
 ```
 
-> `06_manuscript/`, `out/`, and `docx/` are build artifacts, excluded from version control (see `.gitignore`).
+> `06_manuscript/`, `out/`, and `docx/` are build artifacts, excluded from version control (see `.gitignore`). The submission-ready manuscript, cover letter, GigaDB package and renumbered figures 1–9 live in `submission/`.
 
 ---
 
