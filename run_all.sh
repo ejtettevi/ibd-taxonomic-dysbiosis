@@ -1,9 +1,23 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Use absolute paths to bypass broken conda run wrapper
-RSCRIPT="/opt/homebrew/Caskroom/miniforge/base/envs/pd-microbiome/bin/Rscript"
-PYTHON="/opt/homebrew/Caskroom/miniforge/base/envs/pd-microbiome/bin/python"
+# Resolve Rscript and Python portably: prefer executables already on PATH
+# (e.g. an activated conda env), otherwise fall back to the environment named
+# in environment.yml. No absolute machine-specific paths are hardcoded.
+find_cmd() {
+  local name="$1"
+  if command -v "$name" >/dev/null 2>&1; then
+    command -v "$name"
+  elif [ -n "${CONDA_PREFIX:-}" ] && [ -x "$CONDA_PREFIX/bin/$name" ]; then
+    echo "$CONDA_PREFIX/bin/$name"
+  else
+    echo "Error: $name not found on PATH and not under CONDA_PREFIX" >&2
+    echo "Hint: run 'conda activate pd-microbiome' first." >&2
+    exit 1
+  fi
+}
+RSCRIPT="$(find_cmd Rscript)"
+PYTHON="$(find_cmd python)"
 
 stage="${1:-all}"
 COHORTS_FILE="cohorts.tsv"
