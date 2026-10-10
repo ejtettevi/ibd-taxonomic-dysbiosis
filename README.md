@@ -79,7 +79,6 @@ graph LR
 ├── data/
 │   ├── metadata/             sample_name / status / age / sex per cohort
 │   └── taxon/                species & genus count tables (+ per-cohort subdirs)
-├── figures/                  intermediate renders          (versioned)
 ├── figures_final/            publication figures 1–9       (versioned)
 ├── generate_final_publication_figures.py   publication figures 1–9 (single entry point)
 ├── environment.yml           full conda environment (R + Python)
