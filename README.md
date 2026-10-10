@@ -163,9 +163,9 @@ Each stage clears its own outputs first, so re-running any stage is always safe 
 
 | | | |
 |:---:|:---:|:---:|
-| **Fig 1 · Study design**<br><img src="figures_final/figure_1_flowchart.png" width="400"> | **Fig 2 · Forest plot**<br><img src="figures_final/figure_2_forest_plot.png" width="400"> | **Fig 3 · ROC curves**<br><img src="figures_final/figure_3_roc_curves.png" width="400"> |
-| **Fig 4 · Composition**<br><img src="figures_final/figure_4_composition.png" width="400"> | **Fig 5 · PCA**<br><img src="figures_final/figure_5_pcoa.png" width="400"> | **Fig 6 · Heatmap**<br><img src="figures_final/figure_6_heatmap.png" width="400"> |
-| **Fig 7 · Diversity**<br><img src="figures_final/figure_7_diversity.png" width="400"> | **Fig 8 · Feature importance**<br><img src="figures_final/figure_8_importance.png" width="400"> | **Fig 9 · Co-occurrence**<br><img src="figures_final/figure_9_network.png" width="400"> |
+| **Fig 1 · Composition**<br><img src="figures_final/figure_1_composition.png" width="400"> | **Fig 2 · PCoA**<br><img src="figures_final/figure_2_pcoa.png" width="400"> | **Fig 3 · Heatmap**<br><img src="figures_final/figure_3_heatmap.png" width="400"> |
+| **Fig 4 · Diversity**<br><img src="figures_final/figure_4_diversity.png" width="400"> | **Fig 5 · Feature importance**<br><img src="figures_final/figure_5_importance.png" width="400"> | **Fig 6 · Co-occurrence**<br><img src="figures_final/figure_6_network.png" width="400"> |
+| **Fig 7 · Study design**<br><img src="figures_final/figure_7_flowchart.png" width="400"> | **Fig 8 · Forest plot**<br><img src="figures_final/figure_8_forest_plot.png" width="400"> | **Fig 9 · ROC curves**<br><img src="figures_final/figure_9_roc_curves.png" width="400"> |
 
 ---
 

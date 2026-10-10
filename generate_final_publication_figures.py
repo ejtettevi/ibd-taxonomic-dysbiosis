@@ -522,10 +522,10 @@ def generate_figure_1():
                                 connectionstyle="arc3,rad=-0.25"),
                 zorder=1)
 
-    plt.savefig(f"{OUT_DIR}/figure_1_flowchart.png", bbox_inches='tight',
+    plt.savefig(f"{OUT_DIR}/figure_7_flowchart.png", bbox_inches='tight',
                 facecolor='white')
     plt.close()
-    print("Figure 1 saved."); report_coverage(f"{OUT_DIR}/figure_1_flowchart.png")
+    print("Figure 1 saved."); report_coverage(f"{OUT_DIR}/figure_7_flowchart.png")
 
 
 # -----------------------------------------------------------------------------
@@ -580,9 +580,9 @@ def generate_figure_2(scorecard, taxa):
     sns.despine()
     # Reserve a fixed strip for the legend instead of letting tight_layout guess.
     fig.subplots_adjust(left=0.235, right=0.755, top=0.97, bottom=0.13)
-    plt.savefig(f"{OUT_DIR}/figure_2_forest_plot.png", bbox_inches='tight', facecolor='white')
+    plt.savefig(f"{OUT_DIR}/figure_8_forest_plot.png", bbox_inches='tight', facecolor='white')
     plt.close()
-    print("Figure 2 saved."); report_coverage(f"{OUT_DIR}/figure_2_forest_plot.png")
+    print("Figure 2 saved."); report_coverage(f"{OUT_DIR}/figure_8_forest_plot.png")
 
 
 # -----------------------------------------------------------------------------
@@ -624,7 +624,7 @@ def generate_figure_3():
     ax.set_axisbelow(True)
     sns.despine()
     fig.tight_layout()
-    plt.savefig(f"{OUT_DIR}/figure_3_roc_curves.png", bbox_inches='tight', facecolor='white')
+    plt.savefig(f"{OUT_DIR}/figure_9_roc_curves.png", bbox_inches='tight', facecolor='white')
     plt.close()
 
     if summary:
@@ -776,9 +776,9 @@ def generate_complex_analysis(taxa):
     fig.supxlabel('Mean relative abundance (%)', fontsize=FS_AXIS,
                   y=0.02)
     fig.subplots_adjust(left=0.215, right=0.995, top=0.875, bottom=0.155, wspace=0.08)
-    plt.savefig(f"{OUT_DIR}/figure_4_composition.png", bbox_inches='tight', facecolor='white')
+    plt.savefig(f"{OUT_DIR}/figure_1_composition.png", bbox_inches='tight', facecolor='white')
     plt.close()
-    print("Figure 4 saved."); report_coverage(f"{OUT_DIR}/figure_4_composition.png")
+    print("Figure 4 saved."); report_coverage(f"{OUT_DIR}/figure_1_composition.png")
 
     # Figure 5: PCA of relative-abundance profiles. Previously this ran on raw
     # counts, so PC1 largely encoded library size, and the in-figure title said
@@ -804,9 +804,9 @@ def generate_complex_analysis(taxa):
     ax.axvline(0, color='#CCCCCC', linewidth=0.5)
     sns.despine()
     fig.tight_layout()
-    plt.savefig(f"{OUT_DIR}/figure_5_pcoa.png", bbox_inches='tight', facecolor='white')
+    plt.savefig(f"{OUT_DIR}/figure_2_pcoa.png", bbox_inches='tight', facecolor='white')
     plt.close()
-    print("Figure 5 saved."); report_coverage(f"{OUT_DIR}/figure_5_pcoa.png")
+    print("Figure 5 saved."); report_coverage(f"{OUT_DIR}/figure_2_pcoa.png")
 
     # Figure 6: correlation heatmap. Spearman rather than Pearson, because
     # relative-abundance data are compositional and heavily zero-inflated, where
@@ -830,9 +830,9 @@ def generate_complex_analysis(taxa):
     ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right', fontsize=FS_ANNOT)
     ax.set_yticklabels(ax.get_yticklabels(), rotation=0, fontsize=FS_ANNOT)
     fig.tight_layout()
-    plt.savefig(f"{OUT_DIR}/figure_6_heatmap.png", bbox_inches='tight', facecolor='white')
+    plt.savefig(f"{OUT_DIR}/figure_3_heatmap.png", bbox_inches='tight', facecolor='white')
     plt.close()
-    print("Figure 6 saved."); report_coverage(f"{OUT_DIR}/figure_6_heatmap.png")
+    print("Figure 6 saved."); report_coverage(f"{OUT_DIR}/figure_3_heatmap.png")
 
     # Figure 7: alpha diversity per cohort (the caption says within-cohort, but the
     # old version pooled all three cohorts into one pair of boxes).
@@ -861,9 +861,9 @@ def generate_complex_analysis(taxa):
             ax.set_ylabel('Shannon diversity (natural log)', fontsize=FS_AXIS)
         sns.despine()
     fig.tight_layout()
-    plt.savefig(f"{OUT_DIR}/figure_7_diversity.png", bbox_inches='tight', facecolor='white')
+    plt.savefig(f"{OUT_DIR}/figure_4_diversity.png", bbox_inches='tight', facecolor='white')
     plt.close()
-    print("Figure 7 saved."); report_coverage(f"{OUT_DIR}/figure_7_diversity.png")
+    print("Figure 7 saved."); report_coverage(f"{OUT_DIR}/figure_4_diversity.png")
 
     # Figure 8: feature importance. This deliberately mirrors the reported
     # classifier in 05_ml/ml_crosscohort.py (raw counts, >=20% prevalence filter in
@@ -898,10 +898,10 @@ def generate_complex_analysis(taxa):
         ax.set_axisbelow(True)
         sns.despine()
         fig.tight_layout()
-        plt.savefig(f"{OUT_DIR}/figure_8_importance.png", bbox_inches='tight', facecolor='white')
+        plt.savefig(f"{OUT_DIR}/figure_5_importance.png", bbox_inches='tight', facecolor='white')
         plt.close()
         print(f"Figure 8 saved (top {len(top)} of {len(keep)} taxa at >=20% prevalence).")
-        report_coverage(f"{OUT_DIR}/figure_8_importance.png")
+        report_coverage(f"{OUT_DIR}/figure_5_importance.png")
 
     # Figure 9: co-occurrence networks, Spearman on relative abundance.
     thr = 0.3
@@ -948,9 +948,9 @@ def generate_complex_analysis(taxa):
         axes[i].axis('off')
         panel_label(axes[i], chr(ord('a') + i), dx=-0.02, dy=0.99)
     fig.tight_layout()
-    plt.savefig(f"{OUT_DIR}/figure_9_network.png", bbox_inches='tight', facecolor='white')
+    plt.savefig(f"{OUT_DIR}/figure_6_network.png", bbox_inches='tight', facecolor='white')
     plt.close()
-    print("Figure 9 saved."); report_coverage(f"{OUT_DIR}/figure_9_network.png")
+    print("Figure 9 saved."); report_coverage(f"{OUT_DIR}/figure_6_network.png")
 
 
 if __name__ == "__main__":
