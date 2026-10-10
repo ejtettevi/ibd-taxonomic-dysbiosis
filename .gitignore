@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+06_manuscript/
+docx/
+out/
+.researchclaw_cache/
+temp_inspect/
+config.env

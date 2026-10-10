@@ -1,0 +1,4 @@
+cohort	source_id	source	note
+Nielsen2014	NielsenHB_2014	curatedMetagenomicData (MetaPhlAn3)	PMID 24997787; Shotgun metagenomes, IBD vs healthy controls, cross-sectional
+Ijaz2017	IjazUZ_2017	curatedMetagenomicData (MetaPhlAn3)	PMID 28222161; Crohn's disease dysbiosis; controls are unaffected genetically-linked kindred, cross-sectional
+HMP2	HMP_2019_ibdmdb	curatedMetagenomicData (MetaPhlAn3)	PMID 29311644, 31142855; HMP2 IBD multi-omics, baseline visit only

@@ -1,0 +1,20 @@
+name: pd-microbiome
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11
+  - r-base=4.3
+  - r-tidyverse
+  - r-metafor
+  - bioconductor-phyloseq
+  - bioconductor-maaslin2
+  - bioconductor-ancombc
+  - sra-tools
+  - pandas
+  - numpy
+  - scikit-learn
+  - pip
+  - pip:
+      - pysradb
